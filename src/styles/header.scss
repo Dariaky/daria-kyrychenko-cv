@@ -1,0 +1,56 @@
+@import "variables";
+
+/* ~~~~~~~~ HEADER ~~~~~~~~~ */
+
+.header {
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: 'Sacramento', cursive;
+  }
+
+  &__logo a {
+    font-size: 48px;
+    color: $light-theme;
+  }
+
+  &__navigation {
+    display: none;
+
+    @media #{$Tablet} {
+      display: block;
+    }
+  }
+
+  &__navigation-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  &__navigation-item {
+    white-space: nowrap;
+  }
+
+  &__navigation-item-link:hover {
+    border-bottom: 2px solid;
+  }
+
+  &__navigation-item &__navigation-item-link {
+    color: $accent-color-light;
+  }
+
+  &__navigation-item:nth-child(2) &__navigation-item-link {
+    color: $light-theme;
+  }
+
+  &__navigation-item:not(&__navigation-item:last-child) {
+    margin-right: 1rem;
+  }
+}

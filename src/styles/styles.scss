@@ -1,0 +1,452 @@
+@import "~normalize.css";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+@import "base";
+@import "header";
+@import "footer";
+
+
+/* ~~~~~~~~ MAIN ~~~~~~~~~ */
+
+.intro {
+    padding: 8rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: $light-theme;
+    background-image: -webkit-linear-gradient(30deg,  $light-theme 50%, $skew-background 50%);
+
+    &__content {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__author-image-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__author-image-container &__author-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid #d7d7d7;
+    }
+
+    &__author-image-container::before {
+        content: "";
+        width: 225px;
+        height: 225px;
+        position: absolute;
+        border-radius: 50%;
+        top: -18px;
+        z-index: 0;
+        border: 8px solid #545454;
+    }
+
+    &__title {
+        font-size: 30px;
+        margin-top: 35px;
+    }
+
+    &__title-extra {
+        margin-top: 0;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__socials-item {
+        padding-top: 20px;
+        margin: 0 10px;
+    }
+
+    &__socials-item a {
+        font-size: 30px;
+        color: #848383;
+    }
+
+    &__socials-item a:hover {
+        color: $accent-color-details;
+    }
+}
+
+/* ~~~~~~~~ SECTION ABOUT ME ~~~~~~~~~ */
+
+.about-section__description {
+    font-size: 18px;
+
+    &:last-child {
+        margin-top: 24px;
+    }
+}
+
+.about-section__description-link {
+    color: $light-theme;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* ~~~~~~~~ SECTION SKILLS ~~~~~~~~~ */
+
+.skills {
+
+    &.skills-section {
+        background-color: $light-theme;
+        background-image: -webkit-linear-gradient(180deg, #d7d7d7 15%, #ffffff 65%);
+
+        @media #{$Desktop} {
+            background-image: -webkit-linear-gradient(150deg, $skew-background-secondary 35%, $light-theme 35%);
+        }
+
+    }
+
+    &__header {
+        text-align: right;
+        color: $text-dark;
+        font-size: 18px;
+        padding-top: 1rem;
+    }
+
+
+    &__block {
+        margin-bottom: 3rem;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .skills-list-item {
+        cursor: pointer;
+        font-size: 20px;
+        margin: 0 15px 10px;
+        border-bottom: 1px solid transparent;
+    }
+
+    .skills-list-item.active,
+    .skills-list-item:hover, {
+        border-bottom: 1px solid $text-dark;
+    }
+
+    &__description {
+        margin: 2rem 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__description-icon {
+        padding: 10px 0;
+        font-size: 30px;
+        color: #908720;
+    }
+
+    &__description-header {
+        font-size: 19px;
+    }
+
+    &__description-text {
+        max-width: 500px;
+        min-height: 200px;
+        font-size: 18px;
+    }
+
+    .languages-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 7rem;
+
+        @media #{$Desktop} {
+            flex-wrap: nowrap;
+            margin-top: 5rem;
+        }
+    }
+
+    .languages-list-item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+
+        & .tooltip {
+            position: relative;
+            top: -55px;
+            left: -25px;
+
+            line-height: 40px;
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            background-color: $accent-color-light;
+            color: $text-dark;
+            font-weight: 600;
+            z-index: 0;
+            border-radius: 30px;
+
+            &::after {
+                transform: rotate(-108deg);
+                left: 20px;
+                right: unset;
+
+                content: "";
+                width: 18px;
+                height: 28px;
+                background-color: $accent-color-light;
+                z-index: -1;
+                position: absolute;
+                top: 22px;
+            }
+        }
+
+        & .tooltip.different {
+            background-color: $text-dark;
+            color: $light-theme;
+
+            &::after {
+                background-color: $text-dark;
+            }
+        }
+
+
+        @media #{$Desktop} {
+            margin-bottom: 0;
+
+            &:not(:last-of-type) {
+                margin-right: 100px;
+            }
+
+            & .tooltip {
+                display: none;
+            }
+
+            &:hover .tooltip {
+                display: block;
+                position: absolute;
+                top: -60px;
+                left: -145px;
+
+                &::after {
+                    transform: rotate(-72deg);
+                    right: 20px;
+                    left: unset;
+                }
+            }
+        }
+    }
+
+    .languages-list-item-text {
+        width: 100px;
+        height: 100px;
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bolder;
+        border-radius: 50%;
+        color: $light-theme;
+        transition: transform .5s ease-in-out;;
+        background-color: $text-dark;
+        box-shadow: 2px 4px 10px  $text-dark-secondary;
+    }
+
+    .languages-list-item-text.different {
+        background-color: $accent-color-light;
+        color: $text-dark;
+    }
+
+    @media #{$Desktop} {
+        .skills-list {
+            flex-direction: row;
+            justify-content: center;
+        }
+        .skills-list-item {
+            margin: 0 15px;
+        }
+
+        &__description {
+            margin: 4rem 0;
+        }
+
+        .languages-list {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .languages-list-item-text:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* ~~~~~~~~~EXPERIENCE SECTION ~~~~~~~~~ */
+
+.experience {
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        width: 980px;
+    }
+
+    &__list-item {
+        width: 100%;
+        max-width: 100%;
+        min-height: 244px;
+        padding: 20px 25px;
+        text-align: center;
+        border-radius: 40px;
+        margin: 20px 10px;
+        background-color: $socials;
+        box-shadow: 10px 10px $skew-background-secondary;
+    }
+
+    &__list-item:nth-child(even) {
+        text-align: right;
+    }
+
+    &__list-item:nth-child(odd) {
+        text-align: left;
+    }
+
+    @media #{$Desktop} {
+        &__list {
+            padding: 0 2rem;
+        }
+
+        &__list-item:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        &__list-item {
+            max-width: 410px;
+        }
+    }
+
+    &__item-description {
+        padding-top: 8px;
+    }
+
+    &__item-position {
+        font-size: 20px
+    }
+
+    &__item-company {
+        color: $accent-color-light;
+        font-size: 19px;
+        font-weight: 600;
+        padding: 10px 0;
+    }
+
+    &__item-duration {
+        color: $text-dark;
+        font-weight: 600;
+    }
+}
+
+
+/* ~~~~~~~~ PROJECTS SECTION ~~~~~~~~~ */
+
+.projects-section {
+    background-color: $light-theme;
+    background-image: -webkit-linear-gradient(40deg, $skew-background 35%, $light-theme 35%);
+}
+
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects__list-item {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    background-color: #393939;
+    color: $light-theme;
+    perspective: 1000px;
+}
+
+.projects__image {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+}
+
+.project-card {
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.project-card-back.different-back {
+    background-color: $accent-color-details;
+    color: $light-theme;
+}
+
+.project-card-back h1 {
+    font-size: 20px;
+}
+
+.project-card-back p {
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.project-card-front {
+    background-color: #4c4c4c;
+    color: #ffffff;
+}
+
+.project-card-back {
+    background-color: $skew-background-secondary;
+    color: $text-dark;
+    padding: 5px 15px;
+    transform: rotateY(180deg);
+}
