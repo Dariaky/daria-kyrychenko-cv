@@ -15,63 +15,66 @@ function ready() {
                 id: 'html',
                 title: 'HTML',
                 icon: '<i class="fab fa-html5"></i>',
-                description: 'I have a solid understanding of HTML and how to make your website semantically-enriched for SEO purposes, ' +
-                    'making it more discoverable by search engines and more user-friendly for humans.',
+                description: 'I have a solid understanding of HTML and how to make your website semantically enriched ' +
+                    'for SEO purposes, making it more discoverable by search engines and more user-friendly for humans.',
             },
             {
                 id: 'css',
                 title: 'CSS',
                 icon: '<i class="fab fa-css3-alt"></i>',
-                description: 'Having profound knowledge of CSS and all commonly used preprocessors (SASS, LESS, SCSS), ' +
-                    'I would make sure your application doesn\'t suffer from multiple style recalculations and unexpected breaks, ' +
-                    'the behavior is consistent across platforms and that your style system is organized in a reusable durable way.'
+                description: 'Having a profound knowledge of CSS and all commonly used preprocessors (SASS, LESS, SCSS), ' +
+                    'I would make sure your application doesn\'t suffer from multiple style recalculations and unexpected ' +
+                    'breaks, the behaviour is consistent across platforms and that your style system is organized in a ' +
+                    'reusable, durable way.'
             },
             {
                 id: 'js',
                 title: 'JavaScript',
                 icon: '<i class="fab fa-js"></i>',
-                description: 'Possessing strong knowledge of JavaScript, its advanced concepts and data structures, ' +
-                    'makes me feel comfortable not only while building functionality in pure JavaScript, but also ' +
-                    'while applying my skills for frameworks, TypeScript and node.js world.',
+                description: 'Possessing strong knowledge of JavaScript, its advanced concepts and data structures makes ' +
+                    'me feel comfortable while building functionality in pure JavaScript and applying my skills for ' +
+                    'frameworks, TypeScript and Node.js.',
             },
             {
                 id: 'angular',
                 title: 'Angular',
                 icon: '<i class="fab fa-angular"></i>',
-                description: 'I have an opportunity to master Angular every day on a real time enterprise project. ' +
-                    'I possess advanced knowledge of this framework knowing its strong and weak spots, its optimization techniques ' +
-                    'which helps me to find complex design and architecture solutions for Angular based application.' +
-                    'Love talking about Dependency Injection, Change Detection and Pipes.',
+                description: 'I have an opportunity to master Angular every day on a real-time enterprise project. ' +
+                    'I possess advanced knowledge of this framework, its strong and weak places, and its optimization ' +
+                    'techniques. All that helps me to find complex design and architecture solutions for Angular-based ' +
+                    'applications. I love talking about Dependency Injection, Change Detection and Pipes.',
             },
             {
                 id: 'react',
                 title: 'React',
                 icon: '<i class="fab fa-react"></i>',
-                description: 'React is definitely a good framework. I am glad that I had experience working with it, but if you\'d ask me which one I prefer, ' +
-                    'I would choose Angular with no doubts',
+                description: 'I am a framework-agnostic person. I possess knowledge in both Angular and React. ' +
+                    'My skills with React and Redux are solid, although I acknowledge the lack of a practical aspect ' +
+                    'due to my close work with Angular. I seek opportunities to work with React and gain more experience.',
             },
             {
                 id: 'webpack',
                 title: 'Webpack',
                 icon: '<i class="fas fa-cube"></i>',
-                description: 'Webpack is a heart of any web framework. I have an experience of building web applications ' +
-                    'with its help and adjust setting whenever needed. This knowledge helps me to understand framework mechanisms in a more ' +
-                    'profound way.',
+                description: 'Webpack is the heart of any web framework. I have experience building web applications ' +
+                    'with its help and adjusting settings whenever needed. This knowledge helps me to understand ' +
+                    'framework mechanisms more profoundly.',
             },
             {
                 id: 'node',
                 title: 'Node.js',
                 icon: '<i class="fab fa-node"></i>',
-                description: 'Knowledge of Node.js brings me a wider picture of how web world actually works. ' +
-                    'I am glad I have a chance to practice Node.js creating express server, API endpoints, authentication system ' +
-                    'as well as use it for server side rendering with such tools as Angular Universal.',
+                description: 'Knowledge of Node.js gives me a broader picture of how the web world operates. ' +
+                    'I am glad to have an opportunity to practice Node.js, working with express servers, npm scripts, ' +
+                    'API endpoints, authentication systems, and server-side rendering with Angular Universal.',
             },
             {
                 id: 'git',
                 title: 'Git',
                 icon: '<i class="fab fa-git-alt"></i>',
-                description: 'Git is my everyday companion which ensures proper team work. It helps me to deliver my work, evaluate other developers\' code ' +
-                    'and investigate any issues occurred. I have a deep understanding of git and able to solve any conflict like a real psychologist.',
+                description: 'Git is my everyday companion, which ensures proper teamwork. It helps me deliver my work, ' +
+                    'evaluate other developers\' code and investigate any issues. I deeply comprehend Git and can solve ' +
+                    'any conflict like a real psychologist.',
             },
         ]
 
